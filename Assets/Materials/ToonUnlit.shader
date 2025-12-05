@@ -2,7 +2,7 @@ Shader "Unlit/ToonUnlit"
 {
     Properties
     {
-        _Color("Color", Color) = (0.5, 0.65, 1, 1)
+        _outColor("Color", Color) = (0.5, 0.65, 1, 1)
         _MainTex ("Texture", 2D) = "white" {}
         [HDR]
         _AmbientColor("Ambient Color", Color) = (0.4,0.4,0.4,1)
@@ -70,7 +70,8 @@ Shader "Unlit/ToonUnlit"
 
                 return o;
             }
-            float4 _Color;
+            //Uniform variables
+            float4 _outColor;
             float4 _AmbientColor;
             float _Glossiness;
             float4 _SpecularColor;
@@ -80,17 +81,22 @@ Shader "Unlit/ToonUnlit"
 
             float4 frag (v2f i) : SV_Target
             {
+                //Compare normal with light direction
                 float3 normal = normalize(i.worldNormal);
                 float nDotL = dot(_WorldSpaceLightPos0, normal);
+
+                //Divide the light and dark sides
                 float shadow = SHADOW_ATTENUATION(i);
                 float lightIntensity = smoothstep(0, 0.01, nDotL * shadow);
                 float4 light = lightIntensity * _LightColor0;
 
                 float3 viewDir = normalize(i.viewDir);
-
+                
+                //Blig-Phog
                 float3 halfVec = normalize(_WorldSpaceLightPos0 + viewDir);
                 float nDotH = dot(normal, halfVec);
 
+                //Grab specular lighting
                 float specularIntensity = pow(nDotH * lightIntensity, _Glossiness * _Glossiness);
                 float specularIntensitySmooth = smoothstep(0.005, 0.01, specularIntensity);
                 float4 specular = specularIntensitySmooth * _SpecularColor;
@@ -102,7 +108,7 @@ Shader "Unlit/ToonUnlit"
                 // sample the texture
                 float4 sample = tex2D(_MainTex, i.uv);
              
-                return _Color * sample * (_AmbientColor + light + specular + rim);
+                return _outColor * sample * (_AmbientColor + light + specular + rim);
             }
             ENDCG
         }
