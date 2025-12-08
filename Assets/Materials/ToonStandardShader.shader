@@ -26,7 +26,7 @@ Shader "Custom/ToonStandardShader"
         Pass
         {
             Tags
-            {"LightMode" = "UniversalForward" "PassFlags" = "OnlyDirectional"}
+            {"LightMode" = "UniversalForward"}
 
             CGPROGRAM
             #pragma vertex vert
