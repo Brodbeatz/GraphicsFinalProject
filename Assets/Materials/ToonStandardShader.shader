@@ -25,7 +25,8 @@ Shader "Custom/ToonStandardShader"
 
         Pass
         {
-            
+            Tags{"LightMode"="UniversalForward"
+    "UniversalMaterialType"="SimpleLit"}
 
             CGPROGRAM
             #pragma vertex vert

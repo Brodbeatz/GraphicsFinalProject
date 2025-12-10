@@ -16,17 +16,16 @@ Shader "Unlit/ToonUnlit"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Opaque"
+    //     "LightMode"="UniversalForward"
+    // "UniversalMaterialType"="SimpleLit"
+    }
 
         LOD 100
 
         Pass
         {
-            // Tags
-            // {
-            //     "LightMode" = "ForwardBase"
-            //     "PassFlags" = "OnlyDirectional"
-            // }
+            
 
             CGPROGRAM
             #pragma vertex vert

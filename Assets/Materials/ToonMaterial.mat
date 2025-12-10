@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ToonMaterial
-  m_Shader: {fileID: 4800000, guid: 2f6478c3021108c4786942a02a6ba331, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8f0bd4e44c0a0144ca877238e5304947, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

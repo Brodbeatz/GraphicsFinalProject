@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ToonMaterial Variant
+  m_Name: ToonMaterial Variant 1 Variant 7
   m_Shader: {fileID: 4800000, guid: 8f0bd4e44c0a0144ca877238e5304947, type: 3}
-  m_Parent: {fileID: 2100000, guid: a683ed3b7c2377f41a6bf728d68b4671, type: 2}
+  m_Parent: {fileID: 2100000, guid: 61aad0d122011f148a190477378e0408, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -27,6 +27,6 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _outColor: {r: 1, g: 1, b: 1, a: 1}
+    - _outColor: {r: 0.53660953, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
