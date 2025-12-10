@@ -25,13 +25,13 @@ Shader "Custom/ToonStandardShader"
 
         Pass
         {
-            Tags
-            {"LightMode" = "UniversalForward"}
+            
 
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             #pragma multi_compile_fwdbase
+
           
 
             #include "UnityCG.cginc"
