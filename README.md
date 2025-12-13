@@ -1,1 +1,3 @@
 # GraphicsFinalProject
+For this final we created a toon/cel shader in Unity to give the objects we created in the scene their own cartoony spin.
+The sources we used were chapter 16 of the Halladay textbook which we used to get started with working in Unity, This site: https://roystan.net/articles/toon-shader/ which helped us understand the basics of toon shading where we changed the lighting pass as well as adding the combining it from what we learned from this site: https://nedmakesgames.medium.com/creating-custom-lighting-in-unitys-shader-graph-with-universal-render-pipeline-5ad442c27276 in a shader graph to hopefully add in some custom lighting to the shader.
